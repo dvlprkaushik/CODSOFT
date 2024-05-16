@@ -58,6 +58,8 @@ public class Guessing_game {
         } else if (inPut == 2) {
             System.out.println("Computer : HAHA! " + giveUp + " " + userName);
             System.out.println("Computer : The Random Number generated is -> " + randNumGenerate);
+        } else{
+            System.out.println("Computer : Invalid choice !");
         }
         System.out.println("Computer : Thank You for playing the game.");
         userInput.close();
