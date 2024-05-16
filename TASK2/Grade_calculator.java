@@ -3,6 +3,7 @@ package TASK2;
 import java.util.*;
 
 public class Grade_calculator {
+    // Static method for returning grade correspont to score
     public static String gradingSystem(double score) {
         if (score >= 90) {
             return ("Grade A");
@@ -17,10 +18,12 @@ public class Grade_calculator {
         }
     }
 
+    //main method to exectue all the code
     public static void main(String[] args) {
         String studentName;
         int totalSubjects, totalMarks = 0;
 
+        //Scanner object for user inputs.
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter the name of student : ");
@@ -28,7 +31,9 @@ public class Grade_calculator {
         System.out.print("\nEnter the number of subjects : ");
         totalSubjects = input.nextInt();
 
+        //making an empty array object.
         int subMarks[] = new int[totalSubjects];
+
         System.out.println("\nEnter Marks for each subject->");
         for (int i = 0; i < totalSubjects; i++) {
             // Taking input of the marks in each subject.
@@ -39,6 +44,7 @@ public class Grade_calculator {
 
         double avgPercentage = (double) totalMarks / totalSubjects;
         String studGrade = gradingSystem(avgPercentage);
+        //Displaying all the results.
         System.out.println("\nName of student : " + studentName);
         System.out.println(
                 "Total marks obtained by " + studentName + " is : " + totalMarks + "/" + (totalSubjects * 100));
